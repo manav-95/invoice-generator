@@ -10,6 +10,7 @@ interface Invoice {
     receiverName: string;
     grandTotal: number;
     issuedOn: string;
+    createdAt: Date;
 }
 
 const InvoiceList = () => {
@@ -61,11 +62,11 @@ const InvoiceList = () => {
 
 
     return (
-        <div className="p-6 bg-gray-100 min-h-screen">
+        <div className="p-6 bg-white min-h-screen">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">Invoices</h2>
 
-                <div className="overflow-x-auto p-4 bg-white rounded shadow">
+                <div className="overflow-x-auto p-0 bg-white rounded shadow">
                     <table className="w-full border border-gray-200 rounded overflow-hidden">
                         <thead className="bg-gray-100 text-gray-700 uppercase text-sm">
                             <tr>
@@ -74,6 +75,7 @@ const InvoiceList = () => {
                                 <th className="p-4 text-left">Receiver Name</th>
                                 <th className="p-4 text-center">Amount</th>
                                 <th className="p-4 text-center">Issued Date</th>
+                                <th className="p-4 text-center">Created Date</th>
                                 <th className="p-4 text-center">Actions</th>
                             </tr>
                         </thead>
@@ -96,6 +98,7 @@ const InvoiceList = () => {
                                             </div>
                                         </td>
                                         <td className="p-4 text-center text-gray-600">{new Date(invoice.issuedOn).toLocaleDateString()}</td>
+                                        <td className="p-4 text-center text-gray-600">{new Date(invoice.createdAt).toLocaleDateString()}</td>
 
                                         <td className="p-4 text-center space-x-2">
                                             <button

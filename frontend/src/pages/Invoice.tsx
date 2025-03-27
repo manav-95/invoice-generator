@@ -1,9 +1,9 @@
+import { Helmet } from "react-helmet-async";
 import axios from "axios"
 import { CircleCheckBig, IndianRupee } from "lucide-react";
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
-import { Helmet } from "react-helmet-async";
 
 import printJS from "print-js";
 
@@ -135,7 +135,7 @@ const Invoice = () => {
             <div id="invoice-content" className="border p-4 tracking-wide">
                 <div className="flex justify-between items-center mb-2">
                     <h1 className="text-2xl font-medium">Invoice #{invoice.invoiceId}</h1>
-                    <span className="text-sm">{printDate.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric', hour:'2-digit', minute: '2-digit' })}</span>
+                    <span className="text-sm">{printDate.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</span>
                 </div>
                 <div className="flex items-center justify-start py-3 px-4 bg-green-300/20 border-b-[3.5px] border-green-500">
                     <CircleCheckBig className="h-5 w-5 flex-shrink-0 mr-3 mt-0.5 text-green-600" />
