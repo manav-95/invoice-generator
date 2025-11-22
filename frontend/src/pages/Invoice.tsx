@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import axios from "axios"
 import { CircleCheckBig, IndianRupee } from "lucide-react";
 import { useEffect, useState } from "react"
@@ -128,10 +127,7 @@ const Invoice = () => {
 
     return (
         <div className="max-w-5xl mx-auto my-auto h-screen flex flex-col justify-center">
-            <Helmet>
-                <title>{title}</title>
-                <meta name="description" content="" />
-            </Helmet>
+           
             <div id="invoice-content" className="border p-4 tracking-wide">
                 <div className="flex justify-between items-center mb-2">
                     <h1 className="text-2xl font-medium">Invoice #{invoice.invoiceId}</h1>
