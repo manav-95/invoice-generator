@@ -14,7 +14,7 @@ const app = express();
 app.use(cors({
     origin:[
         "http://localhost:5173/",
-        ""
+        "https://demo-invoice-gen.netlify.app/"
     ]
 }));
 app.use(express.json());
