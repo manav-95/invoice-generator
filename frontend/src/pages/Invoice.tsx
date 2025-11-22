@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import axios from "axios"
 import { CircleCheckBig, IndianRupee } from "lucide-react";
 import { useEffect, useState } from "react"

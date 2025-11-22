@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 import './App.css'
 import CreateInvoice from './pages/CreateInvoice'
 import InvoiceListing from './pages/InvoiceListing'
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <HelmetProvider>
+      <Helmet>
         <Router>
           <Routes>
             <Route path='/' element={<Layout />}>
@@ -21,7 +21,7 @@ function App() {
             </Route>
           </Routes>
         </Router>
-      </HelmetProvider>
+      </Helmet>
     </>
   )
 }
